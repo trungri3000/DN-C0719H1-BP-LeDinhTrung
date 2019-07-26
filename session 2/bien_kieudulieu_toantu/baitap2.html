@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Chuyển Độ C thành độ F</title>
+</head>
+
+<body>
+    <div>
+        <input id="doC" type="number">
+        <select id="do">
+            <option value="doF">độ F</option>
+            <option value="doK">độ K</option>
+        </select>
+        <button onclick="change()">Change</button>
+    </div>
+    <script>
+        function change() {
+            let doC=parseInt(document.getElementById("doC").value)
+            if (document.getElementById("do").value == "doF") {
+                let doF = (9 / 5 * doC + 32);
+                document.write("Độ F là : " + doF);
+            }
+            else {
+                let doK = (doC + 273);
+                document.write("Độ K là : " + doK)
+            }
+        }
+
+    </script>
+</body>
+
+</html>
