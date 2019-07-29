@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CHUYỂN ĐỔI TIỀN TỆ
+    </title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="o1">
+            <p>Amount</p>
+            <input id="amount" type="number">
+        </div>
+        <div class="o1">
+            <p> From Currency</p>
+            <select id="fromCurrency">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div class="o1">
+            <p>To Currency</p>
+            <select id="toCurrency">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div class="ol">
+            <button onclick="ketQua()" class="o1">Convert</button>
+        </div>
+    </div>
+    <script>
+        function ketQua() {
+            let amount = parseInt(document.getElementById("amount").value);
+            let fromCurrency = document.getElementById('fromCurrency').value;
+            let toCurrency = document.getElementById('toCurrency').value;
+            if (fromCurrency == 'usd' && toCurrency == 'usd') {
+                alert('Hãy chọn hai loại tiền tệ khác nhau!!!')
+            }
+            if (fromCurrency == 'vnd' && toCurrency == 'vnd') {
+                alert('Hãy chọn hai loại tiền tệ khác nhau!!!')
+            }
+            if (fromCurrency == 'vnd' && toCurrency == 'usd') {
+                let ketQua = amount / 23255;
+                alert('Số tiền sau khi chuyển đổi là :' + ketqua + 'USD')
+            }
+            if (fromCurrency == "usd" && toCurrency == 'vnd') {
+                let ketQua = amount * 23255;
+                alert('Số tiền sau khi chuyển đổi là :' + ketqua + 'VND')
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
