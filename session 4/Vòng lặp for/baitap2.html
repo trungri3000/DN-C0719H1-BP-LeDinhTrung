@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+        <div>
+                <input id="i" type="number">
+                
+                <button onclick="change()">Change</button>
+            </div>
+    <script>
+        function change() {
+    let text = 0;
+    let i;
+    let number=document.getElementById("i");
+
+    for (i = 1; i < number.value; i++) {
+        text +=  i ;
+    }
+ document.write(text);  
+}
+    </script>
+</body>
+
+</html>
