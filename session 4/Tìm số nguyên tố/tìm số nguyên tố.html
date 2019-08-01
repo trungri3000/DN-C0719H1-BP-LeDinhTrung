@@ -10,17 +10,92 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="./style.css">
-        
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
     <div class="container khung">
+
+        <input id="number" type="number">
+        <button onclick="search()">Tìm số nguyên tố</button>
+        <p id="result"></p>
+
+    </div>
+    <script>
+        let totalFor = 0;
+        function checkSNT(value) {
+            let count = 0;
+            for (let i = 2; i <= Math.sqrt(value); i++) {
+                totalFor++;
+                if (value % i == 0)
+                if (value % i !== 2)
+                    return false;
+            }
+
+
+}
+            return true;
+
+        }
+        function search() {
+
+            let number = document.getElementById("number");
+            let count = 2;
+            let i = 2;
+            let drawHTML = "";
+            while (true) {
+                if (checkSNT(i)) {
+                    count++;
+                    drawHTML += "<p>" + i + "</p>";
+                }
+                i++;
+                if (count == parseInt(number.value))
+                    break;
+            }
+            document.getElementById("result").innerHTML = drawHTML;
+            alert(totalFor);
+        }
+
+
+
+
+    </script>
+    <!-- <script>
+//         function checkSNT(value) {
+//             let count = 0;
+//             for(let i = 1; i <= value; i++) {
+//                 if(value % i == 0)
+//                 count++
+//             }
+//             if (count == 2)
+//                 return true;
+//             return false;
+
+//         }
+//         function search(){
+//             let totalFor=0;
+//             let number = document.getElementById("number");
+//             let count = 0;
+//             let i = 2;
+//             let drawHTML="";
+//             while (true) {
+//                 totalFor+=i
+//                 if (checkSNT(i)) {
+//                     count++;
+//                     drawHTML+="<p>"+i+"</p>";
+//                 }
+//                 i++;
+//                 if(count==parseInt(number.value))
+//                 break;
+//             }
+        
+// document.getElementById("result").innerHTML=drawHTML;
+// alert(totalFor);
+//         }
     
-    <input id="Số" type="number">
-    <button onclick="change">Tìm số nguyên tố</button>
-    
-</div>
+    </script> -->
+
 
 
     <!-- Optional JavaScript -->
