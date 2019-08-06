@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Tìm giá trị nhỏ nhất
+    </title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [3, 5, 1, 8, -3, 7, 8];
+        let minArr = minArray(arr1);
+       document.write("abc " + minArray(arr1));
+        function minArray(arr) {
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+
+            }
+            return min;
+        }
+
+    </script>
+</body>
+
+</html>

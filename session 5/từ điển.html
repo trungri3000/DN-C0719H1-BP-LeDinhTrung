@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Từ Điển</title>
+</head>
+
+<body>
+    <div>
+        <input id="words" type="text">
+        <button onclick="search()">Tìm từ tương ứng</button>
+        <p id="ketqua"></p>
+    </div>
+    <script>
+    let ketqua = document.getElementById("ketqua");
+        let tA = ["hello", "goodbye"];
+        let tV = ["xin chào", "tạm biệt"];
+        function search() {
+           let value=document.getElementById("words").value;
+            for(i=0;i<tA.length;i++){
+                if(value==tA[i]){
+                    ketqua.innerHTML =tV[i]
+                    break;
+                }
+                else if(value==tV[i]){
+                    ketqua.innerHTML=tA[i]
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

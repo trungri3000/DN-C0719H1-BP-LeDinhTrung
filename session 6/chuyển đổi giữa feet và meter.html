@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+    </title>
+</head>
+
+<body>
+
+    <body>
+        <div class="row">
+            <div class="o1">
+                <p>distance</p>
+                <input id="distance" type="number">
+            </div>
+            <div class="o1">
+                <p> From Currency<p>
+                        <select id="fromCurrency">
+                            <option value="Feet">Feet</option>
+                            <option value="Meter">Meter</option>
+                        </select>
+            </div>
+            <div class="o1">
+                <p>To Currency</p>
+                <select id="toCurrency">
+                    <option value="Feet">Feet</option>
+                    <option value="Meter">Meter</option>
+                </select>
+            </div>
+            <div class="ol">
+                <button onclick="ketQua()" class="o1">Convert</button>
+            </div>
+        </div>
+        <script>
+            function ketQua() {
+                let distance = document.getElementById("distance").value;
+                let fromCurrency = document.getElementById("fromCurrency").value;
+                let toCurrency = document.getElementById("toCurrency").value;
+                if (fromCurrency == 'Feet' && toCurrency == 'Feet') {
+                    alert('Hãy chọn hai loại khoảng cách khác nhau!!!');
+                }
+                else if (fromCurrency == 'Meter' && toCurrency == 'Meter') {
+                    alert('Hãy chọn hai loại khoảng cách khác nhau!!!');
+                }
+                else if (fromCurrency == 'Feet' && toCurrency == 'Meter') {
+                    let result = distance * 0.305;
+                    alert('khoảng cách sau khi chuyển đổi là :' + result + 'Meter');
+                }
+                else {
+                    let result = distance * 3.279;
+                    alert('khoảng cách sau khi chuyển đổi là :' + result + 'Feet');
+                }
+
+            }
+
+        </script>
+
+
+    </body>
+
+</html>
+</body>
+
+</html>

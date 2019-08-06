@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <script>
+
+        function checkSNT(value) {
+            for (let i = 2; i < Math.sqrt(value); i++) {
+                if (value % i == 0) {
+                    return "không phải là số nguyên tố";
+                }
+            }
+            return "là số nguyên tố";
+
+        }
+        let number = parseInt(prompt("a"));
+        let kQ = checkSNT(number);
+        alert(kQ);
+
+    </script>
+</body>
+
+</html>
